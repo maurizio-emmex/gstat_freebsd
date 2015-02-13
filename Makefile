@@ -7,7 +7,7 @@ gstat: $(SRC)
 	strip gstat
 
 install: gstat
-	install -m4555 gstat /usr/sbin
+	install -m555 gstat /usr/sbin
 
 clean:
 	rm -f gstat
