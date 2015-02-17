@@ -1,0 +1,45 @@
+--- gstat.c.orig	(revision 268238)
++++ gstat.c			(working copy)
+@@ -311,30 +311,38 @@
+ 			PRINTMSG(" %6.0f", (double)ld[2] * 1024);
+ 			if (ld[3] > 1e3) 
+ 				PRINTMSG(" %6.0f", (double)ld[3]);
+-			else
++			else if (ld[3] > 1e2)
+ 				PRINTMSG(" %6.1f", (double)ld[3]);
++			else
++				PRINTMSG(" %6.2f", (double)ld[3]);
+ 			PRINTMSG(" %6.0f", (double)ld[4]);
+ 			PRINTMSG(" %6.0f", (double)ld[5] * 1024);
+ 			if (ld[6] > 1e3) 
+ 				PRINTMSG(" %6.0f", (double)ld[6]);
+-			else
++			else if (ld[6] > 1e2)
+ 				PRINTMSG(" %6.1f", (double)ld[6]);
++			else
++				PRINTMSG(" %6.2f", (double)ld[6]);
+ 
+ 			if (flag_d) {
+ 				PRINTMSG(" %6.0f", (double)ld[8]);
+ 				PRINTMSG(" %6.0f", (double)ld[9] * 1024);
+ 				if (ld[10] > 1e3) 
+ 					PRINTMSG(" %6.0f", (double)ld[10]);
+-				else
++				else if (ld[10] > 1e2)
+ 					PRINTMSG(" %6.1f", (double)ld[10]);
++				else
++					PRINTMSG(" %6.2f", (double)ld[10]);
+ 			}
+ 
+ 			if (flag_o) {
+ 				PRINTMSG(" %6.0f", (double)ld[11]);
+ 				if (ld[12] > 1e3) 
+ 					PRINTMSG(" %6.0f", (double)ld[12]);
+-				else
++				else if (ld[12] > 1e2)
+ 					PRINTMSG(" %6.1f", (double)ld[12]);
++				else
++					PRINTMSG(" %6.2f", (double)ld[12]);
+ 			}
+ 
+ 			if (ld[7] > 80)
